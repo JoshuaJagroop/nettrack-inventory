@@ -1,0 +1,53 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NetTrack - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="align-items: flex-start; padding-top: 40px;">
+    <div class="dashboard-container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>NetTrack OS // System Overview</h2>
+            <a href="login.html" style="color: #ef4444; text-decoration: none;">[ Exit System ]</a>
+        </div>
+        
+        <div class="grid">
+            <div class="stat-card">
+                <h3>142</h3>
+                <p>Total Assets</p>
+            </div>
+            <div class="stat-card">
+                <h3 style="color: #22c55e;">ONLINE</h3>
+                <p>API Status</p>
+            </div>
+            <div class="stat-card">
+                <h3>4</h3>
+                <p>Active VMs</p>
+            </div>
+        </div>
+
+        <div style="background-color: #334155; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <label for="api-search" style="color: #38bdf8; font-weight: bold;">HARDWARE API SEARCH:</label>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <input type="text" id="api-search" placeholder="Enter MAC Address or Part Name (e.g. Ryzen 7 9700X, Radeon RX 9070)..." style="margin: 0;">
+                <button style="width: auto; margin: 0;">SEARCH</button>
+            </div>
+        </div>
+
+        <div>
+            <h4 style="color: #94a3b8;">RECENT INVENTORY LOGS:</h4>
+            <div class="log-entry">
+                <strong>[10:45 AM]</strong> Added: AMD Ryzen 7 9700X CPU to Workstation Beta
+            </div>
+            <div class="log-entry">
+                <strong>[09:30 AM]</strong> Added: AMD Radeon RX 9070 GPU for local streaming rig
+            </div>
+            <div class="log-entry">
+                <strong>[08:15 AM]</strong> MAC API Lookup: Cisco Catalyst Switch (Eth0)
+            </div>
+        </div>
+    </div>
+</body>
+</html>

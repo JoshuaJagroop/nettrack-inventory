@@ -1,0 +1,32 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NetTrack - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>NetTrack Login</h2>
+        <form action="dashboard.html" method="GET">
+            <div class="form-group">
+                <label for="email">Admin Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="mfa">MFA Token (Optional for now):</label>
+                <input type="text" id="mfa" name="mfa">
+            </div>
+            <button type="submit">SECURE LOGIN</button>
+        </form>
+        <p style="text-align: center; margin-top: 15px; font-size: 0.85rem;">
+            Need an account? <a href="register.html" style="color: #38bdf8;">Register Here</a>
+        </p>
+    </div>
+</body>
+</html>
