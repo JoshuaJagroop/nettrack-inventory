@@ -33,6 +33,27 @@
             <button type="submit">REGISTER ACCOUNT</button>
         </form>
     </div>
+<script>
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const res = await fetch('/api/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      fullname: document.getElementById('fullname').value,
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    })
+  });
+  const data = await res.json();
+  if (res.ok) {
+    alert('Account created! Redirecting to login...');
+    window.location.href = 'login.html';
+  } else {
+    alert(data.error);
+  }
+});
+</script>
 </body>
 </html>
 

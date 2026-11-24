@@ -28,5 +28,25 @@
             Need an account? <a href="register.html" style="color: #38bdf8;">Register Here</a>
         </p>
     </div>
+<script>
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const res = await fetch('/api/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    })
+  });
+  const data = await res.json();
+  if (res.ok) {
+    window.location.href = 'dashboard.html';
+  } else {
+    alert(data.error);
+  }
+});
+</script>
 </body>
 </html>
+
